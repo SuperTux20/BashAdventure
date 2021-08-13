@@ -1,59 +1,35 @@
 #!/bin/bash
+
+spittext(){
+    printf "%*s" $(((42+$COLUMNS)/2)) "$1"
+    printf "%*s\n" $((($COLUMNS-42)/2))
+    sleep .125
+}
+declare -a text=(
+    "   ____       __    ____    ____ _________ "
+    "  / __ \     /  \   |   \  /   | |  ______|"
+    " / /  \_\   /    \  | |\ \/ /| | | |       "
+    "/ /        /  /\  \ | | \  / | | | |       "
+    "| |   ____ | |  | | | |  \/  | | | |____   "
+    "| |  |__ | | |__| | | |      | | |  ____|  "
+    "\ \    | | |  __  | | |      | | | |       "
+    " \ \__/ /  | |  | | | |      | | | |______ "
+    "  \____/   |_|  |_| |_|      |_| |________|"
+    "   ____    ___  ___ _________  _________   "
+    "  / __ \   | |  | | |  ______| |  _____ \  "
+    " / /  \ \  | |  | | | |        | |     \ \ "
+    "/ /    \ \ | |  | | | |        | |_____/ / "
+    "| |    | | | |  | | | |____    |  __  __/  "
+    "| |    | | | |  | | |  ____|   | |  \ \    "
+    "\ \    / / \ \  / / | |        | |   \ \   "
+    " \ \__/ /   \ \/ /  | |______  | |    \ \  "
+    "  \____/     \__/   |________| |_|     \_\ "
+)
 clear
 COLUMNS=$(tput cols)
 printf "\e[41m"
-printf "%*s" $(((42+$COLUMNS)/2))  "   ____       __    ____    ____ _________ "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "  / __ \     /  \   |   \  /   | |  ______|"
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  " / /  \_\   /    \  | |\ \/ /| | | |       "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "/ /        /  /\  \ | | \  / | | | |       "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "| |   ____ | |  | | | |  \/  | | | |____   "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "| |  |__ | | |__| | | |      | | |  ____|  "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "\ \    | | |  __  | | |      | | | |       "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  " \ \__/ /  | |  | | | |      | | | |______ "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "  \____/   |_|  |_| |_|      |_| |________|"
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep 1
-printf "%*s" $(((42+$COLUMNS)/2))  "   ____    ___  ___ _________  _________   "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "  / __ \   | |  | | |  ______| |  _____ \  "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  " / /  \ \  | |  | | | |        | |     \ \ "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "/ /    \ \ | |  | | | |        | |_____/ / "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "| |    | | | |  | | | |____    |  __  __/  "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "| |    | | | |  | | |  ____|   | |  \ \    "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "\ \    / / \ \  / / | |        | |   \ \   "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  " \ \__/ /   \ \/ /  | |______  | |    \ \  "
-printf "%*s\n" $((($COLUMNS-42)/2))
-sleep .25
-printf "%*s" $(((42+$COLUMNS)/2))  "  \____/     \__/   |________| |_|     \_\ "
-printf "%*s\n" $((($COLUMNS-42)/2))
-printf "\e[49m"
-sleep 1
+for line in "${text[@]}"
+do
+    spittext "$line"
+done
+echo -e "\e[0m"
