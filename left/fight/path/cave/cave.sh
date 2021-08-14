@@ -15,13 +15,13 @@ echo "...and fall..."
 sleep 2
 echo "...and feel plant matter whipping your face... ...what?"
 sleep 2
-echo "                            _______  _______  _ 
+echo "                            _______  _______  _
 |\     /||\     /||\     /||       ||  ____ || |
 | |   | || |   | || |   | || || || || |    ||| |
 | | _ | || |___| || |   | || || || || |____||| |
 | || || ||  ___  || |   | || ||_|| ||  _____|| |
 | || || || |   | || |   | || |   | || |      |_|
-| || || || |   | || |___| || |   | || |       _ 
+| || || || |   | || |___| || |   | || |       _
 |_______||/     \||_______||/     \||/       |_|"
 sleep 1
 echo "..."
@@ -61,36 +61,36 @@ echo "           _______________________
          |   |      |   |
        __|   |      |   |__
       /      |      |      \\
-     |_______|      |_______|"
+|_______|      |_______|"
 echo "A Shardling is about to attack! What will you do? [1/2]"
 echo "1) Slash it"
 echo "2) Crush it"
-read choice
-if [ $choice = "1" ]
+read -r choice
+if [ "$choice" = "1" ]
 then
-	echo "Your sword goes right through the shardling, cutting it in half. Now there are two of them!!"
-	sleep 2
-	. shardlings.sh
-elif [ $choice = "2" ]
+    echo "Your sword goes right through the shardling, cutting it in half. Now there are two of them!!"
+    sleep 2
+    . shardlings.sh
+elif [ "$choice" = "2" ]
 then
-	echo "You jump on the shardling like that mustachio'd plumber, crushing it beneath your feet."
-	sleep 2
+    echo "You jump on the shardling like that mustachio'd plumber, crushing it beneath your feet."
+    sleep 2
 else
-	echo "Input not understood. Please try again."
-	sleep 2
-	clear
-	echo "A Shardling is about to attack! What will you do? [1/2]"
-	echo "1) Slash it"
-	echo "2) Crush it"
-	read choice
-	if [ $choice = "1" ]
-	then
-		echo "Your sword goes right through the shardling, cutting it in half. Now there are two of them!!"
-		sleep 2
-		. shardlings.sh
-	elif [ $choice = "2" ]
-	then
-		echo "You jump on the shardling like that mustachio'd plumber, crushing it beneath your feet."
-		sleep 2
-	fi
+    echo "Input not understood. Please try again."
+    sleep 2
+    clear
+    echo "A Shardling is about to attack! What will you do? [1/2]"
+    echo "1) Slash it"
+    echo "2) Crush it"
+    read -r choice
+    if [ "$choice" = "1" ]
+    then
+        echo "Your sword goes right through the shardling, cutting it in half. Now there are two of them!!"
+        sleep 2
+        . shardlings.sh
+    elif [ "$choice" = "2" ]
+    then
+        echo "You jump on the shardling like that mustachio'd plumber, crushing it beneath your feet."
+        sleep 2
+    fi
 fi
