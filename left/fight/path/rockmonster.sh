@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "${art_rockmonster[@]}"
+echo -e "${art_rockmonster[@]}"
 echo "A big scary rock monster walks out of the mountain wall with a crash and a growl! What will you do? [1/2]"
 echo "1) Fight him"
 echo "2) Stand your ground"
@@ -166,7 +166,7 @@ if [ "$choice" = "y" ]
 then
     echo "You enter the cave."
     e2c
-    . ./cave/cave.sh
+    . ./crystalcave/crystalcave.sh
 elif [ "$choice" = "n" ]
 then
     echo "You continue along the trail."
@@ -179,7 +179,7 @@ else
     then
         echo "You enter the cave."
         e2c
-        . ./cave/cave.sh
+        . ./crystalcave/crystalcave.sh
     elif [ "$choice" = "n" ]
     then
         echo "You continue along the trail."

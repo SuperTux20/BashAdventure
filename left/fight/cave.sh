@@ -15,7 +15,7 @@ then
         pet=true
         e2c
         clear
-        echo "${art_chest[@]}"
+        echo -e "${art_chest[@]}"
         echo "You reach the back of the cave, and see a chest. Do you want to try to open it? [y/n]"
         read -r choice
         if [ "$choice" = y ]
@@ -65,7 +65,7 @@ then
         echo "You don't touch it."
         e2c
         clear
-        echo "${art_chest[@]}"
+        echo -e "${art_chest[@]}"
         echo "You reach the back of the cave, and see a chest. Do you want to try to open it? [y/n]"
         read -r choice
         if [ "$choice" = y ]
@@ -97,7 +97,7 @@ then
             pet=true
             e2c
             clear
-            echo "${art_chest[@]}"
+            echo -e "${art_chest[@]}"
             echo "You reach the back of the cave, and see a chest. Do you want to try to open it? [y/n]"
             read -r choice
             if [ "$choice" = y ]
@@ -123,7 +123,7 @@ then
             echo "You don't touch it."
             e2c
             clear
-            echo "${art_chest[@]}"
+            echo -e "${art_chest[@]}"
             echo "You reach the back of the cave, and see a chest. Do you want to try to open it? [y/n]"
             read -r choice
             if [ "$choice" = y ]

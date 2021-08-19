@@ -60,7 +60,7 @@ try2cross () {
 echo "You shudder as you walk down the path. The trees are dead, and everything is covered in a thin blanket of fog."
 e2c
 clear
-echo "${art_bridge[@]}"
+echo -e "${art_bridge[@]}"
 echo "You come upon a rickety bridge spanning a deep ravine. Do you want to cross it? [y/n]"
 read -r choice
 if [ "$choice" = "y" ]

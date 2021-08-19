@@ -7,7 +7,7 @@ pet=false
 armor=false
 meat=false
 clear
-figlet "Welcome to ADVENTURE, $USER!"
+figlet -w 1000 "Welcome to the Bash Adventure, $USER!"
 echo -e "Be sure to read the README file in $PWD.\\n\e[38;5;240mPress ENTER to continue\e[39m"
 e2c
 clear

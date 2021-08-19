@@ -1,13 +1,5 @@
 #!/bin/bash
-echo "      ________________           ________________
-     /               /          /               /
-    /   *      *    /          /   *      *    /
-   /    ________   /          /    ________   /
- __\\    \\  /\\  /  /__       __\\    \\  /\\  /  /__
-/   \\    \\/__\\/  /   \\     /   \\    \\/__\\/  /   \\
-|    \\__________/    |     |    \\__________/    |
-        |    |                     |    |
-_|    |_                   _|    |_            "
+echo -e "${art_mini_shardlings[@]}"
 echo "What are you gonna do now, Einstein?! [1/2]"
 echo "1) Jump on them"
 echo "2) Slash some more"

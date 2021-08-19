@@ -3,7 +3,7 @@ cd path || exit
 echo "You start to climb the path up the mountain, and start getting hungry as you watch the goats climbing around."
 e2c
 clear
-echo "${art_goat[@]}"
+echo -e "${art_goat[@]}"
 echo "A goat walks in front of you. Do you want to let it pass? [y/n]"
 read -r choice
 if [ "$choice" = "n" ]
@@ -29,7 +29,7 @@ else
     echo "Input not understood. Please try again."
     e2c
     clear
-    echo "${art_goat[@]}"
+    echo -e "${art_goat[@]}"
     echo "A goat walks in front of you. Do you want to let it pass? [y/n]"
     read -r choice
     if [ "$choice" = "n" ]

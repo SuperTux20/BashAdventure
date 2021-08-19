@@ -37,7 +37,7 @@ else
         echo "You go to investigate."
         e2c
         clear
-        echo "${art_fsword[@]}"
+        echo -e "${art_fsword[@]}"
         echo "You find an enchanted sword!"
         echo "Ooh, fiery!"
         fsword=true
