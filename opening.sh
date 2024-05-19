@@ -1,13 +1,12 @@
 #!/bin/bash
 prevdir=$PWD
-cd "$HOME"/Documents/CodeStuff/Bash/Adventures/Adventure_I || exit
 . preload.sh
 fsword=false
 pet=false
 armor=false
 meat=false
 clear
-figlet -w 1000 "Welcome to the Bash Adventure, $USER!"
+figlet "Welcome to the Bash Adventure, $USER!"
 echo -e "Be sure to read the README file in $PWD.\\n\e[38;5;240mPress ENTER to continue\e[39m"
 e2c
 clear
